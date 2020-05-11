@@ -12,7 +12,7 @@ function broadcast(msg: string, senderID?: string) {
     user.send(senderID ? `[${senderID}]: ${msg}` : msg);
 }
 
-export async function chat(ws: WebSocket): Promise<void> {
+export async function chat(ws: WebSocket) {
   const id = v4.generate();
 
   // Register user connection
