@@ -21,6 +21,7 @@ export async function chat(ws: WebSocket) {
 
   // Wait for messages
   for await (const event of ws) {
+    console.log(event);
     const message = typeof event === "string" ? event : "";
 
     broadcast(message, id);
@@ -33,3 +34,5 @@ export async function chat(ws: WebSocket) {
     }
   }
 }
+
+export const testMe = (num1: number, num2: number) => num1 + num2;
